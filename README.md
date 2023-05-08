@@ -17,5 +17,5 @@
 # [PONTA DE PISO](https://github.com/Gui162/scripts/blob/6a870eca40087fd62c2219ff6565aa74f74a6ba3/Ponta%20de%20Pisos.py)
 é um script que calcula a % de desconto baseado na quantidade de metros de piso restantes na ponta de estoque
 
-# [CALC DE IMC](https://github.com/Gui162/scripts/blob/6a870eca40087fd62c2219ff6565aa74f74a6ba3/Calculadora%20IMC.pyw)
+# [CALCULADORA DE IMC](https://github.com/Gui162/scripts/blob/6a870eca40087fd62c2219ff6565aa74f74a6ba3/Calculadora%20IMC.pyw)
 esse é um programa de calculo de IMC utilizando a lib Tkinter, possibilitando uma interface grafica para o programa
