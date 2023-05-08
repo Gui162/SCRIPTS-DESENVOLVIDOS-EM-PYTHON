@@ -16,4 +16,4 @@ while True:
 numeros_com_virgulas = [num + "," for num in numeros]
 numeros_string = "".join(numeros_com_virgulas)
 print(numeros_string)
-time.sleep(50)
+time.sleep(500)
