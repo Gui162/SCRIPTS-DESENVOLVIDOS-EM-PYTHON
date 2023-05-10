@@ -27,7 +27,7 @@ frame_baixo.place(x=0,y=60)
 nome_cima = Label(frame_cima, width=42, height=2, text="CALCULADORA FRETE", fg=cor1, bg=cor0, font="calibri 20 bold")
 nome_cima.place(x=0,y=0)
 
-app_linha = Label(frame_cima, text="", width=600,padx=10, pady=1, height=0, font=("Ivy 1 bold"), bg=cor2, fg=cor1)
+app_linha = Label(frame_cima, text="", width=600,padx=10, pady=1, height=0, bg=cor2, fg=cor1)
 app_linha.place(x=0,y=57)
 
 #--------------------back end-------------------------------------
