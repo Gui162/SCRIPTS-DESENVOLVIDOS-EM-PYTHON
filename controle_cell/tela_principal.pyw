@@ -8,33 +8,31 @@ cor3 = "#0c24fa" #azul escuro
 cor4 = "#262942" #fundo mais claro
 
 
-
-janela = Tk()
-janela.title("Calculo de Frete")
-janela.geometry("800x600")
-janela.configure(bg=cor0)
-janela.resizable(width=False,height=False)
- 
-
-#_________abre sempre no centro da tela____________
-# Define as coordenadas para o canto superior esquerdo
-x = 555
-y = 80
-# Define a posição da janela
-janela.geometry(f"+{x}+{y}")
-
-
-#_______________separação padrao de tela______________________
-frame_cima = Frame(janela, width=800, height=60, bg=cor0)
-frame_cima.place(x=0,y=0)
-
-frame_baixo = Frame(janela, width=800, height=300, bg=cor0)
-frame_baixo.place(x=0,y=60)
-
-#_______________________telas______________________________
-
-
 def tela_principal():
+    global janela
+    janela.destroy()
+    janela = Tk()
+    janela.title("Calculo de Frete")
+    janela.geometry("800x600")
+    janela.configure(bg=cor0)
+    janela.resizable(width=False,height=False)
+
+    #_________abre sempre no centro da tela____________
+    # Define as coordenadas para o canto superior esquerdo
+    x = 555
+    y = 80
+    # Define a posição da janela
+    janela.geometry(f"+{x}+{y}")
+
+
+    #_______________separação padrao de tela______________________
+    frame_cima = Frame(janela, width=800, height=60, bg=cor0)
+    frame_cima.place(x=0,y=0)
+
+    frame_baixo = Frame(janela, width=800, height=300, bg=cor0)
+    frame_baixo.place(x=0,y=60)
+
+    #_______________________telas______________________________
     nome_cima = Label(frame_cima,width=36, height=0, text="CONTROLE DE CELULARES", fg=cor2, bg=cor0, font="calibri 32 bold")
     nome_cima.place(x=0,y=0)
 
@@ -50,8 +48,33 @@ def tela_principal():
     botao_exportar = Button(frame_exportar, text="EXPORTAR DADOS EXISTENTES ",width=35, height=1, fg=cor2, bg=cor3, font="calibri 23 bold")
     botao_exportar.place(x=115,y=50)
 
+    janela.mainloop()
+
 def tela_cadastrar():
-    #desliga a tela principal
+    global janela
+    janela.destroy()
+    janela = Tk()
+    janela.title("Calculo de Frete")
+    janela.geometry("800x600")
+    janela.configure(bg=cor0)
+    janela.resizable(width=False,height=False)
+
+    #_________abre sempre no centro da tela____________
+    # Define as coordenadas para o canto superior esquerdo
+    x = 555
+    y = 80
+    # Define a posição da janela
+    janela.geometry(f"+{x}+{y}")
+
+
+    #_______________separação padrao de tela______________________
+    frame_cima = Frame(janela, width=800, height=60, bg=cor0)
+    frame_cima.place(x=0,y=0)
+
+    frame_baixo = Frame(janela, width=800, height=300, bg=cor0)
+    frame_baixo.place(x=0,y=60)
+
+    #_______________________telas______________________________
     texto_nome = Label(frame_baixo, text="COLOQUE O NOME DA PESSOA:", fg=cor1, bg=cor0, font="calibri 20 bold")
     texto_nome.grid(row=0, column=0, padx=50, pady=10)
 
@@ -72,12 +95,72 @@ def tela_cadastrar():
 
     botao_cadastrar = Button(frame_cadastrar, text="CADASTRAR UM NOMO NUMERO ",width=35, height=1, fg=cor2, bg=cor3, font="calibri 23 bold")
     botao_cadastrar.place(x=115,y=50)
-    
+    volta = PhotoImage(file="volta.png")
+    botao_voltar = Button(frame_cima, image=volta ,width=50, height=50, bg=cor3, command=tela_principal) #botao voltar
+    botao_voltar.place(x=0,y=0)
+
+    janela.mainloop()
 
 
 
 
-tela_principal()
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#=========================================================================== tela principal descartavel ==============================================
+janela = Tk()
+janela.title("Calculo de Frete")
+janela.geometry("800x600")
+janela.configure(bg=cor0)
+janela.resizable(width=False,height=False)
+
+#_________abre sempre no centro da tela____________
+# Define as coordenadas para o canto superior esquerdo
+x = 555
+y = 80
+# Define a posição da janela
+janela.geometry(f"+{x}+{y}")
+
+
+#_______________separação padrao de tela______________________
+frame_cima = Frame(janela, width=800, height=60, bg=cor0)
+frame_cima.place(x=0,y=0)
+
+frame_baixo = Frame(janela, width=800, height=300, bg=cor0)
+frame_baixo.place(x=0,y=60)
+
+#_______________________telas______________________________
+
+nome_cima = Label(frame_cima,width=36, height=0, text="CONTROLE DE CELULARES", fg=cor2, bg=cor0, font="calibri 32 bold")
+nome_cima.place(x=0,y=0)
+
+botao_cadastrar = Button(frame_baixo, text="CADASTRAR UM\nNOVO NUMERO",width=20, height=2, fg=cor2, bg=cor3, font="calibri 23 bold", command=tela_cadastrar)
+botao_cadastrar.grid(row=2, column=1, padx=49, pady=100)
+
+botao_alterar = Button(frame_baixo, text="ALTERAR NUMERO\nEXISTENTE",width=20, height=2, fg=cor2, bg=cor3, font="calibri 23 bold")
+botao_alterar.grid(row=2, column=2, padx=10, pady=100)
+
+frame_exportar = Frame(janela, width=800, height=290, bg=cor0)
+frame_exportar.place(x=0,y=360)
+
+botao_exportar = Button(frame_exportar, text="EXPORTAR DADOS EXISTENTES ",width=35, height=1, fg=cor2, bg=cor3, font="calibri 23 bold")
+botao_exportar.place(x=115,y=50)
 
 janela.mainloop()
