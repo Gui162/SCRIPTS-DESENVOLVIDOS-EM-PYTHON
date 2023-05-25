@@ -1,3 +1,3 @@
 import pyautogui as py
 
-py.moveTo(x=2350, y=700)
+py.moveTo(x=2000, y=195)
