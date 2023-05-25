@@ -1,7 +1,7 @@
 import pyautogui
 from time import sleep
 from math import trunc
-from re import sub
+from re import sub  #subistitui os caracteres q eu quero no caso ta removendo
 numeros = []
 remover = "[R$:]"
 while True:
