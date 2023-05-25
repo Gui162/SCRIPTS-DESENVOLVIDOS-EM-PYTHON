@@ -1,9 +1,12 @@
 import pyautogui
 from time import sleep
 from math import trunc
+from re import sub
 numeros = []
+remover = "[R$:]"
 while True:
-    num = input("Por favor, digite um número (ou 'fim' para encerrar): ").replace(',','.')
+    entrada = input("Por favor, digite um número (ou 'fim' para encerrar): ").replace(',','.')
+    num = sub(remover, "", entrada)
 
     if num == "FIM" or num == "fim" or num == "fin" or num == "FIM" or num == "fim":
         break
@@ -29,9 +32,9 @@ while True:
 
 print("\n")
 print("\n")
-print("\n")
+print("---------------------------------------------------------------------------------")
 print("voce ja arredondou todos os valores!! voce quer inserir eles automaticamente ??")
-print("\n")
+print("---------------------------------------------------------------------------------")
 inserir = input("Escreva (SIM) para colocar os preços automaticos \nEscreva (NAO) apena ter a lista de preços com virgula \nRESPOSTA: ")
 if inserir == "SIM" or inserir == "sim" or inserir == "sin" or inserir == "(SIM)":
     print("o programa vai começar em 5 segungos")
