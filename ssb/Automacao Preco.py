@@ -37,5 +37,6 @@ for valores in numeros:
 
     # Pressiona a tecla "seta para baixo" para mover para a próxima linha da lista
     pyautogui.press('down')
+    time.sleep(0.02)
 
 time.sleep(9999)
