@@ -1,8 +1,8 @@
 rep = 1
 while rep>=1:
     a = float(input("qual o valor do produto: "))
-    b = float(input("qual a metragem dobrada do piso: "))
-    calculo = b/2
+    b = float(input("qual a metragem de lote do piso: "))
+    calculo = b
     if calculo <= 5.99:
         preco = a*0.50
         print("o valor da ponta é {:.2f}".format(preco))
